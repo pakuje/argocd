@@ -8,5 +8,5 @@ RUN mvn clean package
 # Use OpenJDK image to run the application
 FROM openjdk:11-jre-slim
 COPY --from=build /app/target/*.jar /usr/app/app.jar
-EXPOSE 80
+EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/usr/app/app.jar"]
