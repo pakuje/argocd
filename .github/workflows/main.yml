@@ -23,7 +23,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./argocd/src/Dockerfile  
+        file: ./Dockerfile  
         push: true
         tags: your-acr-name.azurecr.io/your-app-name:latest
       env:
